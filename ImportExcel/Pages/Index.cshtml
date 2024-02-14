@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="row justify-content-md-center">
+    <div class="col-md-9 col-lg-9 col-12 mt-3">
+        <div class="card shadow">
+            <h6 class="card-header">وارد کردن اکسل دانش آموزان</h6>
+            <div class="card-body">
+                <section class="card-text">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9 col-lg-9 col-12"> 
+                            <div class="row mb-3">
+                                <div class="col-1 text-end" id="submitExcel">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="col-11 mt-2" id="ExcelStatus"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>فایل اکسل : </label>
+                                <input type="file" name="Excel" id="Excel" class="form-control" />
+                                <a class="" href="/excel/student_template.xlsx">دریافت فایل نمونه</a>
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <button class="btn btn-primary" onclick="SubmitExcel()" id="submitExcel-btn" title="ذخیره"><i class="fa fa-save"></i> ذخیره</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
